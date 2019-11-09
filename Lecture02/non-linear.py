@@ -8,7 +8,7 @@ x = np.linspace(-1, 1, dsize)
 y = x**2 + np.random.normal(size=dsize)/4
 
 model = tf.keras.Sequential([
-    tf.keras.layers.Dense(2, activation="tanh", kernel_initializer=tf.keras.initializers.GlorotNormal() ),
+    tf.keras.layers.Dense(2, activation="tanh", kernel_initializer=tf.keras.initializers.GlorotNormal(), input_shape=(1,) ),
     tf.keras.layers.Dense(1, activation="linear", kernel_initializer=tf.keras.initializers.GlorotNormal())
 ])
 
